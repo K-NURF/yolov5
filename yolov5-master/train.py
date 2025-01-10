@@ -409,7 +409,7 @@ def train(hyp, opt, device, callbacks):
                     imgs = nn.functional.interpolate(imgs, size=ns, mode="bilinear", align_corners=False)
 
             # Forward
-            with torch.amp.autocast(device_type='cuda', dtype=torch.float16 if amp else torch.float32):
+            with torch.cuda.amp.autocast(amp):
                 pred = model(imgs)  # forward
                 loss, loss_items = compute_loss(pred, targets.to(device))  # loss scaled by batch_size
                 if RANK != -1:
