@@ -4,9 +4,9 @@ python train.py --data ../custom-dataset/data.yaml --img 640 --weights udacity/y
 
 python train.py --img 640 --batch 32 --epochs 70 --data ../custom-dataset/data.yaml --weights udacity/yolov5s_finetune4/weights/best.pt --hyp runs/evolve/exp3/hyp_evolve.yaml
 
-python detect.py --source ../test_videos/2024_11_02_17_30_09_Nor.MOV --weights runs/train/exp2/weights/best.pt --device 0 --conf 0.25 --project outputs --name results
-python detect.py --source ../test_videos/2024_11_02_17_30_09_Nor.MOV --weights udacity/yolov5s_finetune4/weights/best.pt --device 0 --conf 0.25 --project outputs --name results
-python detect.py --source ../test_videos/2024_11_02_17_30_09_Nor.MOV --weights runs/custom_model2/weights/best.pt --device 0 --conf 0.25 --project outputs --name results
+python detect.py --source ../test_videos/New/2024_11_03_21_10_50_Nor.MOV --weights runs/train/exp2/weights/best.pt --device 0 --conf 0.25 --project outputs --name results
+python detect.py --source ../test_videos/New/2024_11_03_21_10_50_Nor.MOV --weights udacity/yolov5s_finetune4/weights/best.pt --device 0 --conf 0.5 --project outputs_udacity --name results
+python detect.py --source ../ --weights runs/custom_model2/weights/best.pt --device 0 --conf 0.25 --project outputs --name results
 
 
 

@@ -24,9 +24,9 @@
 !cfg/yolov3*.cfg
 
 storage.googleapis.com
-runs/*
 data/*
 data/images/*
+videos/*
 !data/*.yaml
 !data/hyps
 !data/scripts
@@ -256,3 +256,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+annotated_frames/
+output_videos
+outputs
+outputs_udacity
